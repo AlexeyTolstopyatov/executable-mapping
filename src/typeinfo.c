@@ -1,7 +1,6 @@
 #include "typeinfo.h"
 
 /*
- * Выводит таблицу с информацией о элементе + {unsigned char} + \n
  * binfo = BYTE info (__uint8_t)
  */
 void binfo(__uint8_t *cell)
@@ -13,7 +12,6 @@ void binfo(__uint8_t *cell)
 }
 
 /*
- * Выводит таблицу с информацией о элементе + {unsigned short} + \n
  * winfo = WORD info (__uint16_t)
  */
 void winfo(__uint16_t *cell)
@@ -23,7 +21,6 @@ void winfo(__uint16_t *cell)
 }
 
 /*
- * Выводит таблицу с информацией о элементе {unsigned long} + \n
  * dwinfo = DWORD (double WORD) info (__uint64_t)
  */
 void dwinfo(__uint64_t* cell)
@@ -33,7 +30,7 @@ void dwinfo(__uint64_t* cell)
 }
 
 /*
- * Обнуляет значение смещения сегмента. 
+ * РЎР±СЂРѕСЃ Р·РЅР°С‡РµРЅРёСЏ РІСЃРµС… СЃРјРµС‰РµРЅРёР№ СЃРµРіРјРµРЅС‚РѕРІ
  */
 void nulloffset()
 {

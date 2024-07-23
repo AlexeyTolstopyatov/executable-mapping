@@ -3,7 +3,7 @@
 
 
 /*
- * Выводит таблицу содержания MZ заголовка.
+ * Р’С‹РІРѕРґРёС‚ С‚Р°Р±Р»РёС†Сѓ СЃРѕРґРµСЂР¶Р°РЅРёСЏ MZ Р·Р°РіРѕР»РѕРІРєР°.
  */
 void printmz(struct MZ_HEADER *exec)
 {
@@ -52,7 +52,7 @@ void printmz(struct MZ_HEADER *exec)
 }
 
 /*
- * Выводит таблицу содержания PE заголовка.
+ * Р’С‹РІРѕРґРёС‚ С‚Р°Р±Р»РёС†Сѓ СЃРѕРґРµСЂР¶Р°РЅРёСЏ PE Р·Р°РіРѕР»РѕРІРєР°.
 */
 void printpe(struct NT_HEADER *exec)
 {
@@ -77,6 +77,9 @@ void printpe(struct NT_HEADER *exec)
     binfo(&exec->header.characteristics);
 }
 
+/*
+ * Р’С‹РІРѕРґРёС‚ С‚Р°Р±Р»РёС†Сѓ СЃРѕРґРµСЂР¶Р°РЅРёСЏ РѕРїС†РёРѕРЅР°Р»СЊРЅРѕРіРѕ PE Р·Р°РіРѕР»РѕРІРєР°
+ */
 void printope(struct OPTIONAL_PE_HEADER *ope)
 {
     printf("OPTIONAL SIGNATURE\t");
@@ -136,6 +139,9 @@ void printope(struct OPTIONAL_PE_HEADER *ope)
     printf("----------------\n");
 }
 
+/*
+ * Р’С‹РІРѕРґРёС‚ С‚Р°Р±Р»РёС†Сѓ СЃРѕРґРµСЂР¶Р°РЅРёСЏ PE Р·Р°РіРѕР»РѕРІРєР°
+ */
 void printne(struct NE_HEADER *ne) 
 {
     printf("NE HEADER TABLE\n");
@@ -311,7 +317,6 @@ void printvxd(struct VXD_HEADER *le)
     printf("Virtual Device Driver TABLE\n");
     printf("----------------------------\n");
 
-    /*Таблица определения Virtual Device Driver*/
     printf("WINDOWS  RESOURCES  OFFSET\t");
     dwinfo(&le->win_resoff);
     printf("WINDOWS  RESOURCES  LENGTH\t");
@@ -354,7 +359,6 @@ void printsig(__uint16_t header)
 
 /* 
  * OS from NE FILE HEADER
- * Поле ОС из заголовка NE
  */
 void osnefh(__uint8_t *os)
 {
@@ -378,7 +382,6 @@ void osnefh(__uint8_t *os)
 
 /*
  * OS FROM LX FILE HEADER
- * Поле из заголовка LX/LE
  */
 void oslxfh(__uint16_t *os) 
 {
@@ -404,7 +407,7 @@ void oslxfh(__uint16_t *os)
 }
 
 /*
- * Поле ЦП из заголовка NE
+ * CPU NE file header
  */
 void cpunefh(__uint16_t *cpu) 
 {
@@ -429,7 +432,7 @@ void cpunefh(__uint16_t *cpu)
 }
 
 /*
- * Поле ЦП из заголовка LE
+ * CPU LX/LE file header
  */
 void cpulxfh(__uint16_t* cpu)
 {
@@ -464,7 +467,7 @@ void cpulxfh(__uint16_t* cpu)
     printf(" CPU architecture\n");
 }
 
-/* Ищет и определяет другие флаги для процессора */
+/* РС‰РµС‚ Рё РІС‹РІРѕРґРёС‚ С„Р»Р°РіРё РґР»СЏ РїСЂРѕС†РµСЃСЃРѕСЂР° */
 void osmode(__uint8_t *flag)
 {
     if (*flag == NE_FLAGS_PROTECTED_MODE)

@@ -2,11 +2,12 @@
 #include "typeinfo.h"
 #include "mapping.h"
 
-/*		(С) Толстопятов Алексей
- * Содержание "Printing.h" -- функции, выводящие информацию о элементе.
- * Используются для формирования таблицы заголовка
+/*		(РЎ) РўРѕР»СЃС‚РѕРїСЏС‚РѕРІ РђР»РµРєСЃРµР№
+ * РЎРѕРґРµСЂР¶Р°РЅРёРµ "Printing.h" -- С„СѓРЅРєС†РёРё, РІС‹РІРѕРґСЏС‰РёРµ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЌР»РµРјРµРЅС‚Рµ.
+ * РСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ С‚Р°Р±Р»РёС†С‹ Р·Р°РіРѕР»РѕРІРєР°
  * 
  */
+
 void printsig(__uint16_t header);
 void printmz(struct MZ_HEADER *exec);
 void printpe(struct NT_HEADER *exec);
@@ -15,7 +16,6 @@ void printne(struct NE_HEADER *exec);
 void printvxd(struct VXD_HEADER *exec);
 void printlx(struct LX_HEADER *orig);
 
-/* Определения для диагностики */
 #include "linearexec_definitions.h"
 #include "newexec_definitions.h"
 
